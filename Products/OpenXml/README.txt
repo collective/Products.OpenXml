@@ -63,6 +63,8 @@ Credits
 
 * Engineering by `the Ingeniweb team <http://www.ingeniweb.com>`_
 
+* Icons gracefully given by `Alexander Gross
+  <http://www.therightstuff.de/2006/12/16/Office+2007+File+Icons+For+Windows+SharePoint+Services+20+And+SharePoint+Portal+Server+2003.aspx>`_
 
 SVN repository
 ##############
