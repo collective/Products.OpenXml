@@ -1,0 +1,6 @@
+#####
+To do
+#####
+
+* Cleanup mimetypes_registry and portal_transforms when
+  uninstalling. There's no GS support for uninstall.
