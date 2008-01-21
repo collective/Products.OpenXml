@@ -19,9 +19,8 @@ Requirements
 * Plone 2.5 or Plone 3 (note that indexing of OpenXml documents only
   works from Plone 3.0 due to AT changes in field indexing)
 
-* openxmllib for Python:
-  Download: http://sourceforge.net/project/showfiles.php?group_id=74634
-  Subversion: https://ingeniweb.svn.sourceforge.net/svnroot/ingeniweb/openxmllib/
+* openxmllib 1.0.0 (+) for Python:
+  http://code.google.com/p/openxmllib/
 
 * Note that openxmllib requires the - excellent - lxml. See the
   instructions provided in openxmllib documentation.
