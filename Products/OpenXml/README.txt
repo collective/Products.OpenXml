@@ -2,7 +2,7 @@
 OpenXml
 #######
 
-By Ingeniweb_
+By `Gilles Lenfant <mailto:gilles.lenfant@gmail.com>`_
 
 About OpenXml
 #############
