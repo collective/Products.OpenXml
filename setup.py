@@ -1,11 +1,12 @@
+# -*- coding: utf-8 -*-
 import os
 from setuptools import setup, find_packages
 
 _home_dir = os.path.join(os.path.dirname(__file__), 'Products', 'OpenXml')
 
-_version = open(os.path.join(_home_dir, 'version.txt'), 'r').read().strip()
-_long_description = open(os.path.join(_home_dir, 'README.txt')).read()
-_long_description += open(os.path.join(_home_dir, 'HISTORY.txt')).read() 
+_version = file(os.path.join(_home_dir, 'version.txt'), 'r').read().strip()
+_long_description = file(os.path.join(_home_dir, 'README.txt')).read()
+_long_description += file(os.path.join(_home_dir, 'HISTORY.txt')).read() 
 
 setup(
     name='Products.OpenXml',
