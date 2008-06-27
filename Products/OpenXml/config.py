@@ -3,6 +3,7 @@
 """Configuration data"""
 
 from openxmllib import contenttypes as ct
+import mimetypes
 
 PROJECTNAME = 'OpenXml'
 PROJECT_GLOBALS = globals()
@@ -87,6 +88,8 @@ office_mimetypes = (
 for mt in office_mimetypes:
     mt['globs'] = tuple(['*.' + ext for ext in mt['extensions']])
     mt['icon_path'] = '++resource++openxml-icons/%s.png' % mt['extensions'][0]
-
+    # Adding to standard mimetypes
+    mimetypes.add_type(mt['mimetypes'][0], '.' + mt['extensions'][0])
 
 del ct
+del mimetypes
