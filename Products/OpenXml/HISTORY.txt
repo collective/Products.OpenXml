@@ -2,6 +2,14 @@
 History
 #######
 
+SVN Trunk
+#########
+
+https://svn.plone.org/svn/collective/Products.OpenXml/trunk
+
+* Change summary
+  [svn login]
+
 1.0.0
 #####
 
