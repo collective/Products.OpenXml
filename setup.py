@@ -4,13 +4,13 @@ from setuptools import setup, find_packages
 
 _home_dir = os.path.join(os.path.dirname(__file__), 'Products', 'OpenXml')
 
-_version = file(os.path.join(_home_dir, 'version.txt'), 'r').read().strip()
+version = file(os.path.join(_home_dir, 'version.txt'), 'r').read().strip()
 _long_description = file(os.path.join(_home_dir, 'README.txt')).read()
 _long_description += file(os.path.join(_home_dir, 'HISTORY.txt')).read() 
 
 setup(
     name='Products.OpenXml',
-    version=_version,
+    version=version,
     description="OpenXml documents support for Plone",
     long_description=_long_description,
     classifiers=[
