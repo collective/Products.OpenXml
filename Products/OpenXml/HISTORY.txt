@@ -2,10 +2,10 @@
 History
 #######
 
-SVN trunk
-#########
+1.0.0
+#####
 
-https://svn.plone.org/svn/collective/Products.OpenXml/trunk/
+https://svn.plone.org/svn/collective/Products.OpenXml/tags/1.0.0
 
 * Added new mime types to the "mimetypes" standard module (should be
   done by openxmllib in next release)

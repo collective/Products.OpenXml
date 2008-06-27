@@ -25,23 +25,17 @@ Requirements
 * Note that openxmllib requires the - excellent - lxml. See the
   instructions provided in openxmllib documentation.
 
-.. _Ingeniweb:: http://www.ingeniweb.com
 
 Install
 #######
 
-As any traditional Zope product:
-
-* Inflate the OpenXml-x.y.z.tgz in the Products directory of your Zope
-  instance.
-
-* Use the quickinstaller on your Plone site(s)
-
+From now, OpenXml is an egg, but you already know it if you're reading
+this browsing the pypi site. So to get the latest distro suitable to
+your Plone, you only need to add ``Products.OpenXml`` to the eggs list
+of your ``buildout.cfg``.
 
 License
 #######
-
-Copyright (c) 2007 Ingeniweb SAS
 
 This software is subject to the provisions of the GNU General Public
 License, Version 2.0 (GPL).  A copy of the GPL should accompany this
@@ -59,8 +53,6 @@ Please read ``tests/README.txt' for unit tests.
 
 Credits
 #######
-
-* Engineering by `the Ingeniweb team <http://www.ingeniweb.com>`_
 
 * Icons gracefully given by `Alexander Gross
   <http://www.therightstuff.de/2006/12/16/Office+2007+File+Icons+For+Windows+SharePoint+Services+20+And+SharePoint+Portal+Server+2003.aspx>`_
@@ -84,10 +76,3 @@ Before asking for support, please make sure that your problem is not
 described in the documentation that ships with OpenXml or any required
 component (see Requirements_ above).
 
-* `Mail to Ingeniweb support <mailto:support@ingeniweb.com>`_ in
-  english or french.
-
-* Report issues in english only in the tracker (available from the
-  project's page in Download_ above).
-
-`Donations are welcome for new features <http://sourceforge.net/project/project_donations.php?group_id=74634>`_
