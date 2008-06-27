@@ -3,10 +3,12 @@
 """
 Our transform (most job is done by openxmllib)
 """
+import mimetypes
 import openxmllib
 from openxmllib import contenttypes as ct
 from Products.PortalTransforms.interfaces import itransform
 from config import SITE_CHARSET, TRANSFORM_NAME
+from Products.OpenXml import logger
 
 class openxml_to_text:
     __implements__ = itransform
@@ -53,10 +55,18 @@ class openxml_to_text:
 
     def convert(self, orig, data, **kwargs):
 
-        orig_file = kwargs.get('filename') or 'unknown.xxx'
+        #orig_file = kwargs.get('filename') or 'unknown.xxx'
         mimetype = kwargs.get('mimetype')
-        doc = openxmllib.openXmlDocument(orig, mimetype)
-        data.setData(doc.indexableText().encode(SITE_CHARSET, 'replace'))
+        filename = kwargs.get('filename') or 'unknown.xxx'
+        if mimetype is None:
+            mimetype = mimetypes.guess_type(filename)[0]
+        try:
+            doc = openxmllib.openXmlDocument(orig, mimetype)
+            data.setData(doc.indexableText().encode(SITE_CHARSET, 'replace'))
+        except ValueError, e:
+            # Crappy data provided to the transform.
+            logger.error("Crappy file provided, returning empty text", exc_info=True)
+            data.setData('')
         return data
 
 def register():
