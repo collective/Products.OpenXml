@@ -29,10 +29,22 @@ Requirements
 Install
 #######
 
+With zc.buildout
+----------------
+
 From now, OpenXml is an egg, but you already know it if you're reading
 this browsing the pypi site. So to get the latest distro suitable to
 your Plone, you only need to add ``Products.OpenXml`` to the eggs list
 of your ``buildout.cfg``.
+
+Without zc.buildout
+-------------------
+
+::
+  $ easy_install openxmllib
+
+Install the OpenXml directory from the unzipped egg into your instance Products
+folder.
 
 License
 #######

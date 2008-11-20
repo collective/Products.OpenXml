@@ -41,7 +41,7 @@ class PTTestCase(PloneTestCase.PloneTestCase):
                  "Lenfant", "example", "title")
         st = file_item.SearchableText()
         for word in words:
-            self.failUnless(word in st, "Extected %s in indexable text" % word)
+            self.failUnless(word in st, "Expected '%s' in indexable text" % word)
         return
 
 

@@ -7,8 +7,15 @@ SVN Trunk
 
 https://svn.plone.org/svn/collective/Products.OpenXml/trunk
 
-* Change summary
-  [svn login]
+* Added Plone 2.5 compatibility. Note that ATFile that ships with Plone 2.5 does
+  not attempt to index file contents. So only icons and mime types work on a
+  Vanilla Plone 2.5. If you need support for indexing, consider using
+  AttachmentField and PloneExFile that fit with Plone 2.5. As a consequence, the
+  unit test "testATfileSearchableText" fails.
+  [glenfant]
+
+* Fixed a typo in unit tests.
+  [glenfant]
 
 1.0.0
 #####
