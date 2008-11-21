@@ -16,14 +16,17 @@ OpenXml provides Plone resources for OpenXml documents :
 Requirements
 ############
 
-* Plone 2.5 or Plone 3 (note that indexing of OpenXml documents only
-  works from Plone 3.0 due to AT changes in field indexing)
+* Plone 2.5 or Plone 3 (note that indexing of OpenXml documents in ATFile or
+  FileFields only works from Plone 3.x due to AT changes in field indexing).
 
 * openxmllib 1.0.0 (+) for Python:
   http://code.google.com/p/openxmllib/
 
 * Note that openxmllib requires the - excellent - lxml. See the
   instructions provided in openxmllib documentation.
+
+Note that if you install OpenXml with zc.buildout, you should not care about
+installing openxmllib or lxml.
 
 
 Install
@@ -61,7 +64,7 @@ More details in the ``LICENSE`` file included in this package.
 Testing
 #######
 
-Please read ``tests/README.txt' for unit tests.
+Please read ``tests/README.txt`` for unit tests.
 
 Credits
 #######
