@@ -2,10 +2,10 @@
 History
 #######
 
-SVN Trunk
-#########
+1.0.1
+#####
 
-https://svn.plone.org/svn/collective/Products.OpenXml/trunk
+https://svn.plone.org/svn/collective/Products.OpenXml/tags/1.0.1
 
 * Added Plone 2.5 compatibility. Note that ATFile that ships with Plone 2.5 does
   not attempt to index file contents. So only icons and mime types work on a
