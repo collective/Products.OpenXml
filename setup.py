@@ -31,10 +31,5 @@ setup(
     install_requires=[
     'setuptools',
     'openxmllib',
-    'plone.app.controlpanel',
-    'plone.app.portlets',
-    'plone.portlets',
-    'plone.memoize',
-    'plone.i18n',
     ],
 )
