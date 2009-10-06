@@ -2,6 +2,13 @@
 History
 #######
 
+1.0.2
+#####
+
+https://svn.plone.org/svn/collective/Products.OpenXml/tags/1.0.1
+
+* Removed unnecessary required eggs.
+
 1.0.1
 #####
 
