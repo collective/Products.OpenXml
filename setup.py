@@ -6,7 +6,8 @@ _home_dir = os.path.join(os.path.dirname(__file__), 'Products', 'OpenXml')
 
 version = file(os.path.join(_home_dir, 'version.txt'), 'r').read().strip()
 _long_description = file(os.path.join(_home_dir, 'README.txt')).read()
-_long_description += file(os.path.join(_home_dir, 'HISTORY.txt')).read() 
+_long_description += '\n\n'
+_long_description += file(os.path.join(_home_dir, 'HISTORY.txt')).read()
 
 setup(
     name='Products.OpenXml',
@@ -14,10 +15,10 @@ setup(
     description="OpenXml documents support for Plone",
     long_description=_long_description,
     classifiers=[
-    "Framework :: Plone",
-    "Framework :: Zope2",
-    "Programming Language :: Python",
-    ],
+        "Framework :: Plone",
+        "Framework :: Zope2",
+        "Programming Language :: Python",
+        ],
     keywords='Zope CMF Plone openxml',
     author='Gilles Lenfant',
     author_email='gilles.lenfant@gmail.com',
@@ -29,7 +30,7 @@ setup(
     zip_safe=False,
     download_url='http://plone.org/products/openxml',
     install_requires=[
-    'setuptools',
-    'openxmllib',
-    ],
+        'setuptools',
+        'openxmllib',
+        ],
 )
