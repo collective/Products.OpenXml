@@ -2,6 +2,12 @@
 History
 #######
 
+unreleased
+##########
+ * added metadata.xml to the GS-profile to avoid DeprecationWarning
+   "Version for profile Products.OpenXml:default taken from version.txt"
+   [WouterVH]
+
 1.0.2
 #####
 
