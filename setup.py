@@ -31,6 +31,6 @@ setup(
     download_url='http://plone.org/products/openxml',
     install_requires=[
         'setuptools',
-        'openxmllib',
+        'openxmllib>=1.0.6',
         ],
-)
+    )

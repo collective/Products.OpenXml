@@ -61,7 +61,7 @@ class openxml_to_text:
         if mimetype is None:
             mimetype = mimetypes.guess_type(filename)[0]
         try:
-            doc = openxmllib.openXmlDocument(orig, mimetype)
+            doc = openxmllib.openXmlDocument(data=orig, mime_type=mimetype)
             data.setData(doc.indexableText().encode(SITE_CHARSET, 'replace'))
         except ValueError, e:
             # Crappy data provided to the transform.
