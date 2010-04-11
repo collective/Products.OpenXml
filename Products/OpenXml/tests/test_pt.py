@@ -6,8 +6,7 @@ import StringIO
 from Products.CMFCore.utils import getToolByName
 from Products.PloneTestCase import PloneTestCase
 from Products.OpenXml.config import TRANSFORM_NAME
-#import common
-
+import common
 
 class PTTestCase(PloneTestCase.PloneTestCase):
 
@@ -16,6 +15,7 @@ class PTTestCase(PloneTestCase.PloneTestCase):
         portal = self.getPortal()
         self.pt = getToolByName(portal, 'portal_transforms')
 
+
     def testInstallation(self):
         """Checking installation of our transform"""
 
@@ -23,14 +23,13 @@ class PTTestCase(PloneTestCase.PloneTestCase):
                         "%s transform expected" % TRANSFORM_NAME)
         return
 
+
     def testATfileSearchableText(self):
         """Do we index the text of an openxml office file"""
 
         self.loginAsPortalOwner()
-
         class fakefile(StringIO.StringIO):
             pass
-
         this_dir = os.path.dirname(os.path.abspath(__file__))
         test_filename = os.path.join(this_dir, 'wordprocessing1.docx')
         fakefile = fakefile(file(test_filename, 'rb').read())
@@ -51,3 +50,4 @@ def test_suite():
     suite = TestSuite()
     suite.addTest(makeSuite(PTTestCase))
     return suite
+

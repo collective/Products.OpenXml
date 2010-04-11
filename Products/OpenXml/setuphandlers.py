@@ -6,7 +6,6 @@ from Products.CMFCore.utils import getToolByName
 import config
 from Products.OpenXml import logger
 
-
 def setupOpenXml(context):
     """Add MS Office 2007 content types to MimetypesRegistry"""
 
@@ -54,3 +53,5 @@ def removeOpenXml(context):
     transforms_tool = getToolByName(site, 'portal_transforms')
     transforms_tool.unregisterTransform(config.TRANSFORM_NAME)
     return
+
+

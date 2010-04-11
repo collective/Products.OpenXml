@@ -10,7 +10,6 @@ from Products.PortalTransforms.interfaces import itransform
 from config import SITE_CHARSET, TRANSFORM_NAME
 from Products.OpenXml import logger
 
-
 class openxml_to_text:
     __implements__ = itransform
     __name__ = TRANSFORM_NAME
@@ -46,7 +45,7 @@ class openxml_to_text:
 
     output_encoding = SITE_CHARSET
 
-    def __init__(self, name=None):
+    def __init__(self,name=None):
         if name:
             self.__name__=name
         return
@@ -69,7 +68,6 @@ class openxml_to_text:
             logger.error("Crappy file provided, returning empty text", exc_info=True)
             data.setData('')
         return data
-
 
 def register():
     return openxml_to_text()

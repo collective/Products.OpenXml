@@ -5,8 +5,7 @@ from Products.CMFCore.utils import getToolByName
 from Products.MimetypesRegistry.interfaces import IMimetype
 from Products.PloneTestCase import PloneTestCase
 from Products.OpenXml.config import office_mimetypes
-#import common
-
+import common
 
 class MTRTestCase(PloneTestCase.PloneTestCase):
 
@@ -14,6 +13,7 @@ class MTRTestCase(PloneTestCase.PloneTestCase):
 
         portal = self.getPortal()
         self.mtr = getToolByName(portal, 'mimetypes_registry')
+
 
     def testInstallation(self):
         """Checking installation of our Mime types"""
@@ -30,6 +30,7 @@ class MTRTestCase(PloneTestCase.PloneTestCase):
                     IMimetype.isImplementedBy(mtr.lookup(mt_string)[0]),
                     "Didn't find MimeType obj for %s" % mt_string)
         return
+
 
     def testExtensions(self):
         """Finding mimetypes by extension"""
@@ -48,3 +49,4 @@ def test_suite():
     suite = TestSuite()
     suite.addTest(makeSuite(MTRTestCase))
     return suite
+
