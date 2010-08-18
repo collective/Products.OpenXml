@@ -10,7 +10,16 @@ from Products.PortalTransforms.interfaces import itransform
 from config import SITE_CHARSET, TRANSFORM_NAME
 from Products.OpenXml import logger
 
+try:
+    # Plone 4
+    from Products.PortalTransforms.interfaces import ITransform
+except ImportError:
+    # Plone 3
+    from Products.PortalTransforms.z3.interfaces import ITransform
+from zope.interface import implements
+
 class openxml_to_text:
+    implements(ITransform)
     __implements__ = itransform
     __name__ = TRANSFORM_NAME
 
