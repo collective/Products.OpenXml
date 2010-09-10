@@ -26,8 +26,12 @@ class MTRTestCase(PloneTestCase.PloneTestCase):
                 len(mimetype) > 0,
                 "Didn't find MimeType obj for %s" % mt_string)
             if len(mimetype) > 0:
+                lookup_method = hasattr(IMimetype,'isImplementedBy') and \
+                                  IMimetype.isImplementedBy or \
+                                  IMimetype.providedBy
+
                 self.failUnless(
-                    IMimetype.isImplementedBy(mtr.lookup(mt_string)[0]),
+                    lookup_method(mtr.lookup(mt_string)[0]),
                     "Didn't find MimeType obj for %s" % mt_string)
         return
 
