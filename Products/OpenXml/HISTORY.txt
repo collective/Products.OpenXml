@@ -2,6 +2,11 @@
 History
 #######
 
+1.1.x (Unreleased)
+##################
+
+* No changes yet
+
 1.1.0
 #####
 
