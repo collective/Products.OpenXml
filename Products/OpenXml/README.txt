@@ -45,6 +45,7 @@ Without zc.buildout
 -------------------
 
 ::
+
   $ easy_install openxmllib
 
 Install the OpenXml directory from the unzipped egg into your instance Products
