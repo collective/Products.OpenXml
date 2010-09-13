@@ -16,8 +16,9 @@ OpenXml provides Plone resources for OpenXml documents :
 Requirements
 ############
 
-* Plone 2.5 or Plone 3 (note that indexing of OpenXml documents in ATFile or
-  FileFields only works from Plone 3.x due to AT changes in field indexing).
+* Plone 2.5, Plone 3.x, or Plone 4.0 (note that indexing of OpenXml 
+  documents in ATFile or FileFields only works from Plone 3.x onwards
+  due to AT changes in field indexing).
 
 * openxmllib 1.0.0 (+) for Python:
   http://code.google.com/p/openxmllib/
@@ -70,7 +71,8 @@ Credits
 #######
 
 * Icons gracefully given by `Alexander Gross
-  <http://www.therightstuff.de/2006/12/16/Office+2007+File+Icons+For+Windows+SharePoint+Services+20+And+SharePoint+Portal+Server+2003.aspx>`_
+  <http://www.therightstuff.de/2006/12/16/Office+2007+File+Icons+For+Windows+SharePoint+Services+20+And+SharePoint+Portal+Server+2003.aspx>`
+* Minor Plone 4 updates by `David Breitkreutz (davidjb) <http://davidjb.com>`_
 
 SVN repository
 ##############
@@ -81,7 +83,7 @@ https://svn.plone.org/svn/collective/Products.OpenXml/...
 Download
 ########
 
-You may find newer versions of PloneArticle from
+You may find newer versions of Products.OpenXml from
 http://plone.org/products/openxml
 
 Support
