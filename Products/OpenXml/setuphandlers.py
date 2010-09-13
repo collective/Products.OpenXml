@@ -16,10 +16,12 @@ def setupOpenXml(context):
     for mt_dict in config.office_mimetypes:
         main_mt = mt_dict['mimetypes'][0]
         mt_name = mt_dict['name']
-        if bool(mtr.lookup(main_mt)):
-            # Already installed
-            logger.info("%s (%s) Mime type already installed, skipped", main_mt, mt_name)
-            continue
+        existing_mt = mtr.lookup(main_mt)
+        if bool(existing_mt):
+            # Already installed -- eg this could mean Plone 4's 'basic'
+            # default mimetypes; should we delete what's there already?
+            logger.info("%s (%s) Mime type already installed, deleting", main_mt, mt_name)
+            mtr.manage_delObjects(existing_mt)
         mtr.manage_addMimeType(
             mt_name,
             mt_dict['mimetypes'],

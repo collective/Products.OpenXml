@@ -2,6 +2,16 @@
 History
 #######
 
+1.1.0
+#####
+
+* Updated mimetypes registry unit test to work with Plone 4 as well since
+  isImplentedBy doesn't exist on InterfaceClass objects.
+  [davidjb]
+* Modified setup handler to overwrite existing mimetype registry entries
+  as Plone 4 provides a basic implementation.
+  [davidjb]
+
 1.0.3
 #####
 
