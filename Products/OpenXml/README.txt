@@ -73,7 +73,7 @@ Credits
 
 * Icons gracefully given by `Alexander Gross
   <http://www.therightstuff.de/2006/12/16/Office+2007+File+Icons+For+Windows+SharePoint+Services+20+And+SharePoint+Portal+Server+2003.aspx>`
-* Minor Plone 4 updates by `David Breitkreutz (davidjb) <http://davidjb.com>`_
+* Minor Plone 4 updates by `David Beitey (davidjb) <http://davidjb.com>`_
 
 GitHub repository
 ##############
