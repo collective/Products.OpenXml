@@ -75,11 +75,10 @@ Credits
   <http://www.therightstuff.de/2006/12/16/Office+2007+File+Icons+For+Windows+SharePoint+Services+20+And+SharePoint+Portal+Server+2003.aspx>`
 * Minor Plone 4 updates by `David Breitkreutz (davidjb) <http://davidjb.com>`_
 
-SVN repository
+GitHub repository
 ##############
 
-Point your SVN client to
-https://svn.plone.org/svn/collective/Products.OpenXml/...
+Point your Git client at https://github.com/collective/Products.OpenXml.
 
 Download
 ########

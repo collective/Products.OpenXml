@@ -22,7 +22,7 @@ setup(
     keywords='Zope CMF Plone openxml',
     author='Gilles Lenfant',
     author_email='gilles.lenfant@gmail.com',
-    url='http://svn.plone.org/svn/collective/Products.OpenXml',
+    url='https://github.com/collective/Products.OpenXml',
     license='GPLv2',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['Products'],
