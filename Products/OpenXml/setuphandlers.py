@@ -6,8 +6,14 @@ from Products.CMFCore.utils import getToolByName
 import config
 from Products.OpenXml import logger
 
+
+def isNotCurrentProfile(context):
+        return context.readDataFile("openxml_marker.txt") is None
+
+
 def setupOpenXml(context):
     """Add MS Office 2007 content types to MimetypesRegistry"""
+    if isNotCurrentProfile(context): return
 
     site = context.getSite()
 

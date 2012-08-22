@@ -5,7 +5,9 @@ History
 1.1.x (Unreleased)
 ##################
 
-* No changes yet
+* Added marker file in the profile directory to not execute the import step
+  every time a third party add-on is installed.
+  [vincentfretin]
 
 1.1.0
 #####
