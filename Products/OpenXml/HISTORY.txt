@@ -2,7 +2,7 @@
 History
 #######
 
-1.1.x (Unreleased)
+1.1.1 (2012-09-03)
 ##################
 
 * Added marker file in the profile directory to not execute the import step
