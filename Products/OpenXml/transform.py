@@ -16,6 +16,7 @@ try:
 except ImportError:
     # Plone 3
     from Products.PortalTransforms.z3.interfaces import ITransform
+
 from zope.interface import implements
 
 class openxml_to_text:
