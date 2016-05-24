@@ -12,16 +12,19 @@ OpenXml provides Plone resources for OpenXml documents :
 * A set of icons for Office 2007 documents
 * A set of PortalTransforms plugins suitable to OpenXml documents
   indexing
+* OpenXML support for collective.documentfile, ie. an adapter for metadata
+  and cover image extraction
 
 Requirements
 ############
 
-* Plone 2.5, Plone 3.x, or Plone 4.0 (note that indexing of OpenXml 
+* Plone 2.5, Plone 3.x, or Plone 4.0 (note that indexing of OpenXml
   documents in ATFile or FileFields only works from Plone 3.x onwards
-  due to AT changes in field indexing).
+  due to AT changes in field indexing). Likewise, collective.documentfile is
+  only supported from Plone 4 onwards.
 
 * openxmllib 1.0.0 (+) for Python:
-  http://code.google.com/p/openxmllib/
+  http://github.com/glenfant/openxmllib/ (or PyPI)
 
 * Note that openxmllib requires the - excellent - lxml. See the
   instructions provided in openxmllib documentation.
