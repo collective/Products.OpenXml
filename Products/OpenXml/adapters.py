@@ -58,7 +58,6 @@ class OpenXMLDocumentInfo(object):
    @property
    def image(self):
       "return representative (cover) image for document"
-      import pdb; pdb.set_trace()
       cover = self.doc.documentCover()
       if cover:
          img_suffix, img_fp = cover
