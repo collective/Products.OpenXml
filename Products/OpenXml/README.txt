@@ -23,7 +23,7 @@ Requirements
   due to AT changes in field indexing). Likewise, collective.documentfile is
   only supported from Plone 4 onwards.
 
-* openxmllib 1.0.0 (+) for Python:
+* openxmllib 1.1 (+) for Python:
   http://github.com/glenfant/openxmllib/ (or PyPI)
 
 * Note that openxmllib requires the - excellent - lxml. See the
