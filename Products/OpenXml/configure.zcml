@@ -17,4 +17,49 @@
      name="openxml-icons"
      directory="openxml-icons" />
 
+
+   <!-- Presentations -->
+
+   <utility
+       provides="collective.filemeta.interfaces.IFileMetaProvider"
+       factory=".utilities.MetaProvider"
+       name="application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    />
+
+   <utility
+       provides="collective.filemeta.interfaces.IContentMetaUpdater"
+       factory=".utilities.ContentUpdater"
+       name="application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    />
+
+   <!-- Spreadsheets -->
+
+   <utility
+       provides="collective.filemeta.interfaces.IFileMetaProvider"
+       factory=".utilities.MetaProvider"
+       name="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+    />
+
+   <utility
+       provides="collective.filemeta.interfaces.IContentMetaUpdater"
+       factory=".utilities.ContentUpdater"
+       name="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+    />
+
+
+   <!-- Text documents -->
+
+   <utility
+       provides="collective.filemeta.interfaces.IFileMetaProvider"
+       factory=".utilities.MetaProvider"
+       name="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+    />
+
+   <utility
+       provides="collective.filemeta.interfaces.IContentMetaUpdater"
+       factory=".utilities.ContentUpdater"
+       name="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+    />
+
+
 </configure>
