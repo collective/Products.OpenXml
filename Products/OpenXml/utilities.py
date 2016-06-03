@@ -23,7 +23,7 @@ from collective.filemeta.base import MetadataAnnotationsUpdater, DefaultImageUpd
 class MetaProvider(object):
 
 
-   def get_metadata(self, data, mimetype):
+   def get_metadata(self, data, mimetype, filename):
       "implement the utility interface"
 
       self.doc = doc = openXmlDocument(data=data, mime_type=mimetype)
@@ -39,7 +39,9 @@ class MetaProvider(object):
          "keywords": self.keywords,
          "category": core.get("category"),
          "image": self.image,
-         "pagecount": self.pagecount
+         "pagecount": self.pagecount,
+         "mimetype": mimetype,
+         "filename": filename
       }
 
 
@@ -78,12 +80,20 @@ class ContentUpdater(MetadataAnnotationsUpdater, DefaultImageUpdater):
    def update_content(self, obj, metadata):
       "implement the utility interface"
 
-      obj.setTitle(metadata["dc"]["title"])
-      obj.setDescription(metadata["dc"]["subject"])
+      # only set title & description & subject if they do not yet exist
 
-      subject = metadata["keywords"]
-      subject.append(metadata["category"])
-      obj.setSubject(subject)
+      if not obj.Title():
+         obj.setTitle(metadata["dc"]["title"] or metadata["filename"])
+
+      if not obj.Description():
+         obj.setDescription(metadata["dc"]["subject"] or "")
+
+      subject = metadata["keywords"] or []
+      if metadata.get("category"):
+         subject.append(metadata["category"])
+
+      if not obj.Subject():
+         obj.setSubject(subject)
 
       self.annotate_metadata(obj, "pagecount", metadata["pagecount"])
       self.update_image(obj, metadata["image"])
