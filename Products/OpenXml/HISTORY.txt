@@ -2,11 +2,10 @@
 History
 #######
 
-1.1.2 (unreleased)
-##################
+1.2 (unreleased)
+####################
 
-- Nothing changed yet.
-
+* Provide metadata extraction plugin for collective.filemeta
 
 1.1.1 (2012-09-03)
 ##################

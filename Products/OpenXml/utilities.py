@@ -77,22 +77,22 @@ class MetaProvider(object):
 class ContentUpdater(MetadataAnnotationsUpdater, DefaultImageUpdater):
    "updates dc:title, dc:description, dc:subject, page count and cover image thumbnail"
 
-   def update_content(self, obj, metadata):
+   def update_content(self, obj, metadata, overwrite=False):
       "implement the utility interface"
 
-      # only set title & description & subject if they do not yet exist
+      # set title & description & subject if told so or they do not yet exist
 
-      if not obj.Title():
+      if overwrite or not obj.Title():
          obj.setTitle(metadata["dc"]["title"] or metadata["filename"])
 
-      if not obj.Description():
+      if overwrite or not obj.Description():
          obj.setDescription(metadata["dc"]["subject"] or "")
 
       subject = metadata["keywords"] or []
       if metadata.get("category"):
          subject.append(metadata["category"])
 
-      if not obj.Subject():
+      if overwrite or not obj.Subject():
          obj.setSubject(subject)
 
       self.annotate_metadata(obj, "pagecount", metadata["pagecount"])
