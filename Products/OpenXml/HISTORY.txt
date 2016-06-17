@@ -2,10 +2,11 @@
 History
 #######
 
-1.2 (unreleased)
+1.2.0 (2016-06-17)
 ####################
 
-* Provide metadata extraction plugin for collective.filemeta
+* Added support for extracting cover page images from OpenXML documents
+* Implemented metadata extraction plugin for collective.filemeta
 
 1.1.1 (2012-09-03)
 ##################
