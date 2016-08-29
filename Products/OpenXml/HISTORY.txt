@@ -2,6 +2,12 @@
 History
 #######
 
+1.2.1 (2016-08-28)
+##################
+
+* Remove hard dependency on collective.filemeta; it should still be
+  possible to use Products.OpenXml without it as well.
+
 1.2.0 (2016-06-17)
 ####################
 
